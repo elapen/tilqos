@@ -1,0 +1,25 @@
+{
+"records": [
+{"deleted":"ghbdtn ","insert":"привет ","outDeleted":"Ghbdtn ","outInsert":"Привет ","screen":"Ghbdtn "},
+{"deleted":"ghbdtn ","insert":"привет ","outDeleted":"ghbdtn ","outInsert":"привет ","screen":"ghbdtn "},
+{"deleted":"ghbdtn ","insert":"привет ","outDeleted":"GHBDTN ","outInsert":"Привет ","screen":"GHBDTN "},
+{"deleted":"Ghbdtn ","insert":"Привет ","outDeleted":"Ghbdtn ","outInsert":"Привет ","screen":"Ghbdtn "},
+{"deleted":"ghbdtn ","insert":"25 ","outDeleted":"Ghbdtn ","outInsert":"25 ","screen":"Ghbdtn "},
+{"deleted":"ьфьф ","insert":"mama ","outDeleted":"Ьфьф ","outInsert":"Mama ","screen":"Ьфьф "},
+{"deleted":"ёжик","insert":"`;br","outDeleted":"Ёжик","outInsert":"`;br","screen":"Ёжик"},
+{"deleted":" ghbdtn","insert":" привет","outDeleted":" Ghbdtn","outInsert":" привет","screen":" Ghbdtn"},
+{"deleted":"ǆemal","insert":"ǆемал","outDeleted":"Ǆemal","outInsert":"Ǆемал","screen":"Ǆemal"},
+{"deleted":"ǆemal","insert":"ǆемал","outDeleted":"ǅemal","outInsert":"ǆемал","screen":"ǅemal"},
+{"deleted":"ghbdtn ","insert":"ßtraße ","outDeleted":"Ghbdtn ","outInsert":"SStraße ","screen":"Ghbdtn "},
+{"deleted":"ghbdtn ","insert":"ﬁle ","outDeleted":"Ghbdtn ","outInsert":"FIle ","screen":"Ghbdtn "},
+{"deleted":"ghbdtn ","insert":"","outDeleted":"Ghbdtn ","outInsert":"","screen":"Ghbdtn "},
+{"deleted":"ghbdtn ","insert":"i̇stanbul ","outDeleted":"Ghbdtn ","outInsert":"İstanbul ","screen":"Ghbdtn "},
+{"deleted":"z nt,z ","insert":"я тебя ","outDeleted":"Z nt,z ","outInsert":"Я тебя ","screen":"Z nt,z "},
+{"deleted":"pf ","insert":"за ","outDeleted":"Pf ","outInsert":"За ","screen":"Pf "},
+{"deleted":"1bc","insert":"1ис","outDeleted":"1bc","outInsert":"1ис","screen":"1bc"},
+{"deleted":"abc","insert":"É","outDeleted":"Abc","outInsert":"É","screen":"Abc"},
+{"deleted":"abc","insert":"éx","outDeleted":"Abc","outInsert":"Éx","screen":"Abc"},
+{"deleted":"ghbdtn ","insert":"'привет ","outDeleted":"Ghbdtn ","outInsert":"'привет ","screen":"Ghbdtn "},
+{"deleted":"ghbdtn ","insert":"ǳ ","outDeleted":"Ghbdtn ","outInsert":"Ǳ ","screen":"Ghbdtn "}
+]
+}

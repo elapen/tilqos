@@ -1,0 +1,11 @@
+# Build outputs.
+/dist/
+
+# Copies of ../Resources/Models made by `go generate ./...` (tools/syncmodels) for
+# //go:embed. Resources/Models is the single source of truth; a test fails if these drift.
+/internal/models/embedded/*.bin
+
+# Copies of ../LICENSE and ../THIRD_PARTY_NOTICES.md made by `go generate ./...`
+# (tools/synclicenses) for //go:embed; the files at the repository root are the source.
+/internal/licenses/embedded/LICENSE
+/internal/licenses/embedded/THIRD_PARTY_NOTICES.md

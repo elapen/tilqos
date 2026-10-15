@@ -1,0 +1,56 @@
+name: Language request
+description: Ask for support of another language (or report a Kazakh, Russian or English text that is wrong)
+labels: ["language"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tilqos supports English, Russian and Kazakh. Adding a language needs a dictionary we are allowed to ship, the keyboard-layout facts, and a test corpus; see **Adding a language** in [CONTRIBUTING.md](https://github.com/elapen/tilqos/blob/main/CONTRIBUTING.md#adding-a-language). Corrections to the Kazakh or Russian UI text and documentation can also be filed here: choose "Correction to existing text" below.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is this?
+      options:
+        - "New language"
+        - "Correction to existing text (translation, wording, spelling)"
+        - "A word or form that the dictionaries get wrong"
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Language (and script)
+      placeholder: "Ukrainian (Cyrillic) / Turkish (Latin) / Kazakh (Cyrillic)"
+    validations:
+      required: true
+  - type: textarea
+    id: layouts
+    attributes:
+      label: Keyboard layouts people use
+      description: "Names as they appear in macOS (System Settings → Keyboard → Input Sources) or Windows, and which one is the common one. If the layout differs from the Russian one, say which keys carry the extra letters."
+      placeholder: "macOS: Ukrainian, Ukrainian – PC. The letters і ї є ґ are on ..."
+  - type: textarea
+    id: dictionary
+    attributes:
+      label: Dictionary source and licence (new languages)
+      description: "A hunspell .dic/.aff dictionary under a licence that allows redistribution of derived data (BSD, MIT, MPL, LGPL ...). A link and the licence name are enough."
+  - type: textarea
+    id: mistakes
+    attributes:
+      label: Examples of the mistake people make
+      description: "Made-up words are fine. For a correction: the current text, where it appears (UI pane, README, docs file) and what it should be."
+  - type: dropdown
+    id: native
+    attributes:
+      label: Are you a native or fluent speaker?
+      options:
+        - "Native speaker"
+        - "Fluent"
+        - "Not a speaker"
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Can you help?
+      options:
+        - label: I can help review texts or test with real typing
+        - label: I am willing to try implementing this (pull requests are welcome)

@@ -1,0 +1,35 @@
+# English words the LibreOffice/SCOWL dictionary does not carry but people type every day:
+# brands, apps, technical terms and chat abbreviations. Compiled into en.lex as bare stems.
+#
+# They matter in two ways. Typed on the right layout, they are known English and never get
+# rewritten (`afk` must not become `фал`). And inside a Russian or Kazakh sentence they are
+# deliberate, so a known Latin word there stays Latin.
+
+# Apps, platforms and services
+telegram whatsapp instagram tiktok youtube facebook twitter linkedin snapchat viber zoom
+skype discord reddit spotify netflix github gitlab bitbucket figma notion slack trello jira
+confluence canva miro google gmail chatgpt openai claude anthropic gemini copilot wikipedia
+yandex kaspi halyk wolt glovo bolt uber airbnb booking amazon ebay aliexpress wildberries
+ozon olx avito apple microsoft samsung xiaomi huawei nokia sony intel nvidia amd tesla
+dropbox onedrive icloud airdrop airpods iphone ipad imac macbook macos ios ipados watchos
+android windows linux ubuntu debian chrome chromium safari firefox opera edge vscode xcode
+photoshop illustrator excel powerpoint outlook teams webex meet whatsapp's youtube's
+
+# Technical terms
+email emails api apis url urls pdf pdfs html css sql json xml yaml csv tsv http https ftp ssh
+ssl tls dns vpn wifi bluetooth usb hdmi ui ux app apps backend frontend fullstack devops
+deploy deployed deploying deployment docker kubernetes k8s git npm yarn pip brew homebrew
+python javascript typescript swift swiftui kotlin java golang rust ruby php perl bash zsh
+nodejs react vue angular svelte nextjs django flask rails graphql grpc oauth jwt sdk ide cli
+gui cpu gpu ram ssd hdd os localhost dev prod staging repo repos refactor refactoring
+middleware webhook webhooks endpoint endpoints frontend's config configs env async await
+todo todos readme changelog codebase dataset datasets pipeline pipelines runtime timestamp
+username usernames login logins logout signup online offline smartphone smartphones laptop
+startup startups feedback deadline deadlines meetup meetups webinar webinars podcast
+podcasts blog blogs vlog vlogs emoji emojis hashtag hashtags selfie selfies screenshot
+screenshots livestream streamer inbox spam
+
+# Chat abbreviations and informal spellings
+ok okay lol lmao rofl omg btw idk imo imho tbh brb thx thanks pls plz asap fyi afk gg np
+wtf irl ikr smh ttyl gtg kinda gonna wanna gotta yeah yep nope nah hmm hmmm ugh uh um oops
+yay wow haha hahaha hehe xoxo cya dm dms

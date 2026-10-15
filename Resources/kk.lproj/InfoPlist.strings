@@ -1,0 +1,4 @@
+/* Localized Info.plist values (Finder's Get Info, the app switcher). */
+"CFBundleName" = "Tilqos";
+"CFBundleDisplayName" = "Tilqos";
+"NSHumanReadableCopyright" = "© 2026 Tilqos қатысушылары. MIT лицензиясы.";

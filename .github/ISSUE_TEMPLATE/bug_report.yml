@@ -1,0 +1,94 @@
+name: Bug report
+description: Something does not work as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time! Please search existing issues first.
+
+        **Tilqos reads what you type, so please never paste text you actually typed, clipboard contents or window titles here.** Invented example words are enough. Security and privacy problems go through **Security → Report a vulnerability**, not through this form.
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - "macOS 27"
+        - "macOS 26"
+        - "macOS 15"
+        - "macOS 14"
+        - "Windows 11 (experimental)"
+        - "Windows 10 (experimental)"
+        - "Other"
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Mac model / chip, or Windows architecture
+      placeholder: "MacBook Air, Apple M4  /  Windows x64"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Tilqos version
+      description: "Settings → General shows it (or the number in the DMG name)."
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: how
+    attributes:
+      label: How did you install it?
+      options:
+        - "DMG from Releases"
+        - "Homebrew cask"
+        - "Built from source"
+        - "Windows exe / zip"
+  - type: input
+    id: layouts
+    attributes:
+      label: Keyboard layouts enabled
+      description: "System Settings → Keyboard → Input Sources (Windows: language settings)."
+      placeholder: "ABC, Russian, Kazakh"
+  - type: input
+    id: app
+    attributes:
+      label: App you were typing in
+      placeholder: "Safari, Notes, VS Code, Telegram, Terminal..."
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+      description: "Use made-up words if you can. For a wrong correction: the word as it appeared, and what it became."
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: "Which layout was active, what keys you pressed, which app, which mode (Settings → Apps)."
+  - type: dropdown
+    id: permission
+    attributes:
+      label: Permissions
+      description: "Is the menu-bar icon a layout badge (EN / РУ / ҚАЗ) or a warning triangle? Did you grant Accessibility again after the last update?"
+      options:
+        - "Badge (permission looks fine)"
+        - "Warning triangle"
+        - "Not sure"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log excerpt (optional)
+      description: |
+        macOS: only failures are logged by default; to include the per-word trail run `defaults write io.github.elapen.tilqos diagnosticsEnabled -bool true`, restart Tilqos, reproduce the problem and run `log show --last 10m --predicate 'subsystem == "io.github.elapen.tilqos"'`. The log holds lengths, languages, confidences and decisions, never characters, but **read it before pasting** and remove anything private. Windows: the log file in `%LOCALAPPDATA%\Tilqos` (only exists if logging was switched on).
+      render: text
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I have not pasted text I typed, clipboard contents or window titles
+          required: true

@@ -1,0 +1,10 @@
+{
+"records": [
+{"after":"кофе папка zoom","before":"kofe papka zoom","changed":["kofe","papka"]},
+{"after":"а","before":"a b","changed":[]},
+{"after":"дон'т стоп","before":"don't stop","changed":["don't","stop"]},
+{"after":"","before":"","changed":[]},
+{"after":"one, два; three","before":"one, two; three","changed":["two"]},
+{"after":"Аб-cd","before":"Ab-cd","changed":["Ab"]}
+]
+}

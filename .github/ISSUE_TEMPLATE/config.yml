@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and ideas
+    url: https://github.com/elapen/tilqos/discussions
+    about: Ask how to do something, share how it works for you in an app, or talk about Kazakh, Russian and English layouts.
+  - name: Security or privacy problem
+    url: https://github.com/elapen/tilqos/security/advisories/new
+    about: Tilqos reads your keystrokes, so a privacy bug is a security bug. Please report it privately, not as a public issue.

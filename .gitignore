@@ -1,0 +1,31 @@
+# Build output
+build/
+.build/
+.swiftpm/
+dist/
+windows/dist/
+*.xcodeproj
+
+# Release artifacts
+*.dmg
+*.exe
+*.zip
+
+# Intermediate icon renders; AppIcon.icns and icon-1024.png are committed.
+Resources/AppIcon.iconset/
+
+# Downloaded source dictionaries. The derived models in Resources/Models are committed;
+# these are only needed to regenerate them via ./generate-models.sh.
+data/
+
+# Never commit signing material, secrets or local tool state
+*.p12
+*.cer
+*.mobileprovision
+*.pem
+.env
+.claude/
+CLAUDE.md
+
+# macOS
+.DS_Store

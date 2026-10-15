@@ -1,0 +1,10 @@
+# Generated binaries must never be touched by line-ending conversion.
+*.syso binary
+*.ico binary
+*.bin binary
+
+# Stable line endings whatever core.autocrlf says on the machine that checks this out.
+*.sh text eol=lf
+*.go text eol=lf
+*.json text eol=lf
+*.ps1 text eol=crlf

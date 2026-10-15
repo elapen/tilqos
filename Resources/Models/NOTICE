@@ -1,0 +1,25 @@
+Tilqos language models: licence notice
+======================================
+
+The *.bin files in this folder are machine-generated, lossy, binary derivatives of
+third-party dictionaries. They are NOT the original dictionaries and are NOT covered by the
+MIT License that applies to the rest of Tilqos. Each group stays under the terms of its
+source:
+
+  kk.bin, kk-lex.bin, kk-morph.bin   Hunspell Kazakh dictionary (hunspell-kk).
+                                     MPL 1.1 or LGPL 2.1+ or GPL 2.0+; Tilqos relies on
+                                     MPL 1.1 and LGPL 2.1+.
+  ru.bin, ru-lex.bin                 LibreOffice ru_RU Hunspell dictionary, Alexander I.
+                                     Lebedev. BSD-style licence with a "modified versions
+                                     must be marked" clause: these files are modified
+                                     versions of that dictionary.
+  en-lex.bin                         LibreOffice en_US Hunspell dictionary (SCOWL, Ispell).
+                                     SCOWL / Ispell licences.
+  en.bin                             Letter-trigram statistics from /usr/share/dict/words
+                                     (Webster's Second International, 1934), described by its
+                                     supplier as out of copyright. No words are stored.
+
+Full texts, credits, the description of modifications and where the Source Code is
+available: THIRD_PARTY_NOTICES.md (next to the app, or in the repository root) and the
+upstream READMEs in LICENSES/. The files are produced by Sources/GenModel and
+generate-models.sh, which are MIT-licensed and published at https://github.com/elapen/tilqos.

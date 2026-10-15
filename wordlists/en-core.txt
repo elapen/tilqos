@@ -1,0 +1,16 @@
+# The most frequent English words in running text — compiled into en.lex as the frequency
+# tier. See ru-core.txt for why the detector needs one. Listed alphabetically: the order
+# carries no meaning, only membership does.
+
+a about actually after again all already also always am an and any anyone are as at back be because
+been big book boy but by can can't car child children come could day did didn't do does doesn't
+don't done down each end even everything family few first for friend from get give go going good got
+great had hand has have he her here hey hi him his home house how i i'll i'm if in into is isn't it
+it's its job just know last left let let's life like little long look made make man many may maybe
+me men might money more most much must my name never new next no not nothing now of off ok okay old
+on one only or other our out over own part people place please put really right room run said same
+say see set she should small so some someone something sorry still take than thank thanks that
+that's the their them then there there's these they they're thing things think this those time to
+today tomorrow too top two up us use very want was water way we we're week well went were what
+what's when where which who why will with woman women won't word work world would year yes yesterday
+you you're your

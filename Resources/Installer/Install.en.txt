@@ -1,0 +1,72 @@
+Tilqos: installation
+====================
+
+1. Drag Tilqos into the Applications folder (the shortcut is right next to it).
+
+[[NOT_NOTARIZED]]
+2. FIRST LAUNCH: right-click Tilqos -> "Open", then confirm with "Open" in the
+   dialog.
+
+   macOS blocks a plain double click: the app has not been notarized by Apple.
+   Right click -> "Open" is needed only once.
+
+   If there is no dialog: System Settings -> Privacy & Security -> scroll down
+   -> "Open Anyway".
+[[/NOT_NOTARIZED]]
+[[NOTARIZED]]
+2. Open Tilqos from the Applications folder.
+[[/NOTARIZED]]
+
+3. Tilqos asks for the Accessibility permission. It is needed both to read the
+   keys you press and to replace the word you typed.
+
+   Click "Open Settings", find Tilqos in the list and turn the switch on, then
+   come back to the Tilqos window: the rest happens by itself. If Tilqos is
+   not in the list, click "+" below it and pick Tilqos in Applications.
+
+   You do NOT need to grant Input Monitoring: Accessibility covers it, and
+   the app may be missing from that list altogether. That is normal.
+
+4. A short tutorial with live practice opens, so you can try everything
+   right away. To open it again: menu -> "Tutorial".
+
+5. The icon appears in the menu bar next to the clock. The status line at the
+   top of its menu turns green when everything works.
+
+Interface language: English, Russian or Kazakh, in Settings -> General.
+
+
+Shortcuts
+---------
+  ⌥⇧F   fix the last word
+  ⌥⇧S   fix the selection
+  ⌥⇧Z   undo the last correction
+  ⌥⇧V   fix the text on the clipboard
+  ⌥⇧1 / ⌥⇧2 / ⌥⇧3   English / Русский / Қазақша
+  Tab   accept a suggestion (in terminals and code editors: ⌥Space)
+
+
+Privacy
+-------
+Tilqos watches the keys you press so that it can notice a wrong layout.
+This is what it does with them:
+
+  - No network access, no telemetry, no update checks.
+  - What you type is kept in memory only. It is cleared after at most 5
+    seconds without typing, when you switch apps, at Return, Tab, Esc and
+    similar keys, in password fields (while macOS secure input is on), and when
+    the Mac locks or goes to sleep.
+  - "Undo" keeps the latest corrections in memory for at most 2 minutes, and
+    wipes them when you switch apps or windows (Tilqos's own Settings window
+    included), lock or sleep the Mac, or quit.
+  - The clipboard is used only by actions that need it, and its previous
+    contents are restored. Concealed or temporary content (password managers)
+    is never read: the action does nothing, with a beep. Text over 10,000
+    characters is ignored.
+  - Typed text, clipboard contents and window titles are never written to a
+    log. By default only warnings and errors are logged.
+  - On disk: your settings, per-app rules, the exception words you add (plain
+    text) and learned words (salted 64-bit hashes; this is not encryption,
+    short common words could be guessed by someone who can read the file).
+
+More: Settings -> About.

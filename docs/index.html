@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tilqos: fix the wrong keyboard layout (English, Russian, Kazakh)</title>
+<meta name="description" content="Tilqos fixes text typed in the wrong keyboard layout and switches the layout for you: English, Russian and Kazakh, as a native macOS menu-bar app. Free, open source, offline: no cloud, no account, no telemetry.">
+<link rel="canonical" href="https://elapen.github.io/tilqos/">
+<meta name="theme-color" content="#f7f7fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101016" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tilqos">
+<meta property="og:title" content="Tilqos: fix the wrong keyboard layout (English, Russian, Kazakh)">
+<meta property="og:description" content="ghbdtn becomes привет, с2леметс3з becomes сәлеметсіз. A macOS menu-bar app with Kazakh as a first-class language. Free, open source, offline.">
+<meta property="og:image" content="https://elapen.github.io/tilqos/images/banner.png">
+<meta property="og:image:alt" content="Tilqos: ghbdtn becomes привет">
+<meta property="og:url" content="https://elapen.github.io/tilqos/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tilqos: fix the wrong keyboard layout (English, Russian, Kazakh)">
+<meta name="twitter:description" content="A macOS menu-bar app that fixes text typed in the wrong layout and switches it for you. Kazakh is a first-class language. Free, open source, offline.">
+<meta name="twitter:image" content="https://elapen.github.io/tilqos/images/banner.png">
+<link rel="icon" href="images/icon-64.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Tilqos","alternateName":"Тіл қос","applicationCategory":"UtilitiesApplication","operatingSystem":"macOS 14+, Windows (experimental)",
+ "description":"Fixes text typed in the wrong keyboard layout and switches the layout, for English, Russian and Kazakh. A native macOS menu-bar app; works offline.","inLanguage":["en","ru","kk"],
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT","url":"https://elapen.github.io/tilqos/","codeRepository":"https://github.com/elapen/tilqos",
+ "downloadUrl":"https://github.com/elapen/tilqos/releases/latest"}
+</script>
+<style>
+  :root { --bg:#f7f7fb; --panel:#ffffff; --ink:#18181f; --muted:#5f5f6b; --line:#e2e2ea; --accent:#4f46d6; --accent-ink:#ffffff; --accent-soft:#ebeaff; --good:#1b7f4b; --warn:#9a5b00; --warn-soft:#fff3dd; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#101016; --panel:#191923; --ink:#f0f0f6; --muted:#a3a3b2; --line:#2b2b38; --accent:#8d86ff; --accent-ink:#0e0e18; --accent-soft:#26244a; --good:#5bd18f; --warn:#f0b35a; --warn-soft:#33270f; } }
+  * { box-sizing:border-box; } html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  a { color:var(--accent); } img { max-width:100%; height:auto; display:block; }
+  .wrap { max-width:1040px; margin:0 auto; padding:0 16px; }
+  nav { display:flex; align-items:center; flex-wrap:wrap; gap:6px 18px; padding:16px 0; }
+  nav b { font-size:18px; letter-spacing:-.01em; margin-right:auto; display:flex; align-items:center; gap:10px; }
+  nav b img { width:30px; height:30px; border-radius:8px; } nav a { color:var(--muted); text-decoration:none; font-size:14px; } nav a:hover { color:var(--ink); }
+  .hero { text-align:center; padding:44px 0 24px; }
+  .hero h1 { font-size:clamp(32px,6vw,56px); line-height:1.08; letter-spacing:-.03em; margin:0 0 16px; }
+  .hero p { font-size:clamp(17px,2.4vw,20px); color:var(--muted); max-width:740px; margin:0 auto 26px; }
+  .btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .btn { display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:12px; font-weight:600; text-decoration:none; border:1px solid var(--line); background:var(--panel); color:var(--ink); }
+  .btn.primary { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); } .btn:hover { filter:brightness(.96); }
+  .small { font-size:13px; color:var(--muted); margin-top:12px; }
+  .shot { margin:32px auto 0; border-radius:18px; overflow:hidden; border:1px solid var(--line); background:var(--accent-soft); box-shadow:0 30px 80px rgba(30,24,80,.18); min-height:160px; }
+  .shot img { width:100%; }
+  .caption { font-size:13px; color:var(--muted); margin:10px 0 0; }
+  section { padding:52px 0 6px; } h2 { font-size:clamp(25px,4vw,34px); letter-spacing:-.02em; margin:0 0 8px; } .lead { color:var(--muted); margin:0 0 24px; max-width:720px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:20px; } .card h3 { margin:0 0 6px; font-size:18px; } .card p { margin:0; color:var(--muted); font-size:15px; }
+  .lang h3 span { display:inline-block; font-size:12px; font-weight:700; letter-spacing:.04em; border:1px solid var(--line); border-radius:6px; padding:1px 7px; margin-left:8px; color:var(--muted); vertical-align:2px; }
+  .ex { margin:10px 0 0; font:14px/1.7 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color:var(--ink); }
+  .ex i { color:var(--muted); font-style:normal; }
+  table { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--line); border-radius:14px; overflow:hidden; font-size:15px; }
+  th, td { text-align:left; padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:top; } th { color:var(--muted); font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:.05em; } tr:last-child td { border-bottom:0; }
+  .keys td, .keys th { text-align:center; padding:9px 10px; } .keys td:first-child, .keys th:first-child { text-align:left; } .keys .kz { font-weight:700; color:var(--accent); font-size:18px; }
+  code { background:var(--accent-soft); padding:2px 6px; border-radius:6px; font-size:.92em; word-break:break-word; }
+  pre { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:16px; overflow:auto; font-size:14px; }
+  ul.clean { margin:0; padding-left:20px; } ul.clean li { margin:6px 0; }
+  details { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin:10px 0; } summary { cursor:pointer; font-weight:600; } details p { margin:10px 0 0; color:var(--muted); }
+  .note { background:var(--warn-soft); border:1px solid var(--line); border-left:4px solid var(--warn); border-radius:12px; padding:12px 16px; margin:16px 0; font-size:15px; }
+  .privacy li strong { color:var(--ink); }
+  footer { padding:46px 0 60px; color:var(--muted); font-size:14px; text-align:center; } footer a { color:var(--muted); }
+  .scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  :focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main"><b><img src="images/icon-64.png" alt="" width="30" height="30">Tilqos</b><a href="#languages">Languages</a><a href="#features">Features</a><a href="#download">Download</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a><a href="https://github.com/elapen/tilqos">GitHub</a></nav>
+
+  <header class="hero">
+    <h1>Typed it in the wrong layout?<br>Tilqos fixes it.</h1>
+    <p><code>ghbdtn</code> becomes <code lang="ru">привет</code>, <code lang="kk">с2леметс3з</code> becomes <code lang="kk">сәлеметсіз</code>. A native Mac menu-bar app for English, Russian and Kazakh that rewrites the word and switches the layout for you. Free, open source, and everything stays on your Mac.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/elapen/tilqos/releases/latest">Download for macOS</a>
+      <a class="btn" href="https://github.com/elapen/tilqos/releases/latest">Windows (experimental)</a>
+      <a class="btn" href="https://github.com/elapen/tilqos">★ GitHub</a>
+    </div>
+    <div class="small">macOS 14+ (tested on macOS 27) · Apple silicon DMG · MIT license · no network, no telemetry</div>
+    <div class="shot"><video src="images/demo.mp4" poster="images/hero.png" autoplay muted loop playsinline controls preload="metadata" width="1040" style="display:block;width:100%;height:auto" aria-label="Illustration of the flow in suggest mode: ghbdtn is typed, a hint appears at the cursor, Tab turns it into привет and the layout switches"></video></div>
+    <div class="small">Illustration of suggest mode, not a screen recording. In Auto mode confident words are replaced without a card.</div>
+    <p class="caption">The animation illustrates the flow; it is not a screen recording.</p>
+  </header>
+
+  <section id="languages">
+    <h2>Three languages, one of them done properly</h2>
+    <p class="lead">Tilqos was built for people who switch between English, Russian and <strong>Kazakh</strong>. On a Mac, the Russian and Kazakh layouts agree on all 33 Russian letters and differ only on the number row, where Kazakh puts its nine extra letters and Russian puts digits. That one fact shapes the whole design.</p>
+    <div class="grid">
+      <div class="card lang"><h3>English <span>EN</span></h3><p>Russian typed on the English layout is the classic mistake.</p><p class="ex">ghbdtn <i>→</i> <span lang="ru">привет</span><br>,skj <i>→</i> <span lang="ru">было</span></p></div>
+      <div class="card lang"><h3 lang="ru">Русский <span>РУ</span></h3><p>And the other way round. Real words such as <span lang="ru">еще</span> or <span lang="ru">тот</span> are never rewritten.</p><p class="ex"><span lang="ru">руддщ</span> <i>→</i> hello<br><span lang="ru">где</span> <i>↔</i> ult</p></div>
+      <div class="card lang"><h3 lang="kk">Қазақша <span>ҚАЗ</span></h3><p>The nine Kazakh letters turn into digits on the Russian layout. A digit inside a Cyrillic word is a very strong signal.</p><p class="ex"><span lang="kk">с2леметс3з</span> <i>→</i> <span lang="kk">сәлеметсіз</span><br><span lang="kk">0аза0</span> <i>→</i> <span lang="kk">қазақ</span></p></div>
+    </div>
+    <h3 style="margin:30px 0 10px">Where the Kazakh letters live (real macOS layouts)</h3>
+    <div class="scroll"><table class="keys">
+      <tr><th>Key</th><td>2</td><td>3</td><td>4</td><td>5</td><td>=</td><td>9</td><td>-</td><td>8</td><td>0</td></tr>
+      <tr><th>ABC / Russian</th><td>2</td><td>3</td><td>4</td><td>5</td><td>=</td><td>9</td><td>-</td><td>8</td><td>0</td></tr>
+      <tr><th>Kazakh</th><td class="kz" lang="kk">ә</td><td class="kz" lang="kk">і</td><td class="kz" lang="kk">ң</td><td class="kz" lang="kk">ғ</td><td class="kz" lang="kk">һ</td><td class="kz" lang="kk">ұ</td><td class="kz" lang="kk">ө</td><td class="kz" lang="kk">ү</td><td class="kz" lang="kk">қ</td></tr>
+    </table></div>
+    <p class="lead" style="margin-top:16px">Russian typed on the Kazakh layout looks right, so there is nothing to fix: that removes the biggest source of false corrections. And because the Kazakh layout puts its digits on Option, Tilqos remembers <em>key presses</em>, not characters. It also decodes Latin Kazakh back to Cyrillic (<code>qalaisyz</code> becomes <code lang="kk">қалайсыз</code>) with vowel harmony and Kazakh morphology. <a href="https://github.com/elapen/tilqos/blob/main/docs/KAZAKH.md">More on Kazakh</a>.</p>
+  </section>
+
+  <section id="features">
+    <h2>What it does</h2>
+    <p class="lead">Quiet when you type correctly, helpful when you do not.</p>
+    <div class="grid">
+      <div class="card"><h3>Fixes it, or offers</h3><p>When it is sure, it replaces the word as you finish it. When it is not, a small card at the cursor shows <code>было → стало</code>: Tab accepts, any other key dismisses.</p></div>
+      <div class="card"><h3>Switches the layout</h3><p>After a fix the layout follows, so the next word is right. Russian or Kazakh? Your setting, or the Cyrillic layout you last used in that app.</p></div>
+      <div class="card"><h3>Never touches real words</h3><p>It checks word forms from hunspell dictionaries, not just headwords. URLs, paths, e-mail, code identifiers and acronyms are left alone.</p></div>
+      <div class="card"><h3>Cautious, Balanced, Bold</h3><p>Three presets, or tune both thresholds. Undo with <code>⌥⇧Z</code>; undoing right away teaches it to leave that word alone.</p></div>
+      <div class="card"><h3>Per-app control</h3><p>Auto, suggest-only or off per app. Password managers are always off; terminals are suggest-only by default.</p></div>
+      <div class="card"><h3>Learns from you</h3><p>Undone fixes, hints you accept, words you keep: remembered as salted hashes, switchable off, and you can forget it all.</p></div>
+      <div class="card"><h3>Kazakh transliteration</h3><p>Latin ⇄ Cyrillic with the official 2021 alphabet or the ASCII chat spelling, including mixed Kazakh and Russian text.</p></div>
+      <div class="card"><h3>In three languages</h3><p>The interface and the documentation are in English, Russian and Kazakh. Menu-bar icon: <code>EN</code>, <code lang="ru">РУ</code>, <code lang="kk">ҚАЗ</code>.</p></div>
+    </div>
+    <p class="lead" style="margin-top:22px">On the project's own corpus it rewrote 0 of 1,858 correctly typed words and fixed 240 of 249 (96.4 %) wrong-layout words by itself. Those figures are <strong>in-sample</strong>: the corpus was written and tuned by the author, and the Kazakh part is small. <a href="https://github.com/elapen/tilqos/blob/main/docs/ACCURACY.md">How to reproduce them, and what they are not</a>.</p>
+  </section>
+
+  <section id="download">
+    <h2>Download</h2>
+    <p class="lead">The builds are ad-hoc signed and not notarized. That has two consequences, both explained below.</p>
+    <div class="scroll"><table>
+      <tr><th>Platform</th><th>Get it</th><th>Notes</th></tr>
+      <tr><td><b>macOS 14+</b> (Apple silicon)</td><td><a href="https://github.com/elapen/tilqos/releases/latest">DMG from Releases</a> · <code>brew install --cask elapen/tap/tilqos</code></td><td>Drag to Applications. Developed and tested on macOS 27; macOS 14 to 26 are unverified.</td></tr>
+      <tr><td><b>From source</b></td><td><code>git clone https://github.com/elapen/tilqos &amp;&amp; cd tilqos &amp;&amp; ./build.sh install</code></td><td>Swift 6.0+ (Xcode 16+). Intel is untested.</td></tr>
+      <tr><td><b>Windows</b> 10/11, x64 and ARM64</td><td><a href="https://github.com/elapen/tilqos/releases/latest">zip from Releases</a></td><td><strong>Experimental:</strong> never run on real Windows by its author. Unsigned, so SmartScreen warns.</td></tr>
+    </table></div>
+    <div class="note"><strong>First launch.</strong> macOS blocks apps that are not notarized. On macOS 14: Control-click the app, then <em>Open</em>. On macOS 15 and later: System Settings → Privacy &amp; Security → <em>Open Anyway</em>. Or build from source.</div>
+    <div class="note"><strong>Grant Accessibility, and again after every update.</strong> Tilqos needs the Accessibility permission to see keys and replace text. macOS ties it to the app's code identity, and an ad-hoc signature differs for every build, so after an update remove the old Tilqos entry (or run <code>tccutil reset Accessibility io.github.elapen.tilqos</code>) and grant it again. Input Monitoring is an optional read-only fallback. <a href="https://github.com/elapen/tilqos/blob/main/docs/PERMISSIONS.md">Details</a>.</div>
+    <p class="small">Each release lists SHA-256 checksums. There is no updater, so watch the <a href="https://github.com/elapen/tilqos/releases">Releases page</a>.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy: exactly what it does with your keys</h2>
+    <p class="lead">Tilqos has to watch every key you press to notice a wrong layout. So here is what it keeps, for how long, and where the promises stop.</p>
+    <div class="card"><ul class="clean privacy">
+      <li><strong>The typed-word buffer lives only in memory.</strong> It is cleared after 5 seconds without typing (a timer), on app switch, on Return, Tab and Escape-type boundaries, in password fields, and on lock or sleep.</li>
+      <li><strong>Undo keeps only the most recent correction(s)</strong>, in memory, for at most 2 minutes; wiped on lock, sleep, quit and app switch.</li>
+      <li><strong>The clipboard is touched only by actions that need it</strong>, then restored. Content flagged concealed or transient (password managers) is never read; text over 10,000 characters is ignored.</li>
+      <li><strong>No typed text, clipboard content or window titles are ever logged.</strong></li>
+      <li><strong>Stored locally:</strong> settings, per-app exclusions, exception words you add (plain text), and learned vocabulary as salted 64-bit FNV-1a hashes. Those hashes are <em>not</em> cryptographically irreversible: someone who can read the file could guess short common words. Settings can clear exception words and reset learned words.</li>
+      <li><strong>No network access, no telemetry, no updater.</strong></li>
+      <li><strong>Nothing is read or logged while secure input is active.</strong> Fields that do not enable it are not protected by that mechanism.</li>
+    </ul></div>
+    <p class="lead" style="margin-top:16px">Limits: other software with the same permission sees what Tilqos sees; the OS can write crash dumps; the builds are not notarized. <a href="https://github.com/elapen/tilqos/blob/main/docs/PRIVACY.md">Read the full privacy document</a>. Privacy bugs are security bugs: <a href="https://github.com/elapen/tilqos/blob/main/SECURITY.md">report them privately</a>.</p>
+  </section>
+
+  <section id="faq">
+    <h2>Questions</h2>
+    <details><summary>Is it a keylogger?</summary><p>It has to read every key in order to do its job, which is why the source and a precise privacy document are public. The buffer is in memory only, no text is logged, and the app contains no network code.</p></details>
+    <details><summary>Why does it ask for Accessibility?</summary><p>To create the keyboard tap that can swallow the key that accepts a hint, to read the text before the caret, and to replace the wrong text. Input Monitoring alone lets it detect and offer, not apply.</p></details>
+    <details><summary>It stopped working after an update.</summary><p>Expected with ad-hoc signed builds: remove the old entry in Privacy &amp; Security → Accessibility (or run <code>tccutil reset Accessibility io.github.elapen.tilqos</code>), open Tilqos and grant it again.</p></details>
+    <details><summary>Is this Punto Switcher?</summary><p>No. It is similar in purpose and is independent: not affiliated with, or endorsed by, Yandex or Punto Switcher. Kazakh as a first-class language, open source and a local-only design are what Tilqos adds.</p></details>
+    <details><summary>Does it work on Windows?</summary><p>There is an experimental Go port of the same engine. It has never been run on real Windows by its author, is unsigned, and does not recognise password fields in browsers. Testers are very welcome.</p></details>
+    <details><summary>Can you add my language?</summary><p>Maybe. It needs a dictionary we can ship, the keyboard-layout facts and a test corpus. Open a Language request on GitHub.</p></details>
+  </section>
+</div>
+<footer>MIT licensed · language data derived from open dictionaries, see <a href="https://github.com/elapen/tilqos/blob/main/THIRD_PARTY_NOTICES.md">third-party notices</a> · <a href="https://github.com/elapen/tilqos">github.com/elapen/tilqos</a> · <a href="https://github.com/elapen/tilqos/issues">Issues</a> · <a href="https://github.com/elapen/tilqos/discussions">Discussions</a><br>
+README in <a href="https://github.com/elapen/tilqos/blob/main/README.ru.md" lang="ru">Русский</a> · <a href="https://github.com/elapen/tilqos/blob/main/README.kk.md" lang="kk">Қазақша</a><br>Tilqos is not affiliated with Yandex or Punto Switcher.</footer>
+</body>
+</html>
